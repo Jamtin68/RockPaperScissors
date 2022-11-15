@@ -13,8 +13,23 @@ function getComputerChoice() {
     }
 
     return computerChoice;
-
 }
+
+function selection(playerSelection, computerSelection) {
+    if (playerSelection === computerSelection) {
+        console.log("It is a draw! You both picked " + playerSelection);
+    } else if (playerSelection === "Scissor" && computerSelection === "Paper" || playerSelection === "Paper" && computerSelection === "Rock" || playerSelection === "Rock" && computerSelection === "Scissor") {
+        console.log("You win! " + playerSelection + " beats " +computerSelection);
+    } else if (playerSelection === "Scissor" && computerSelection === "Rock" || playerSelection === "Rock" && computerSelection === "Paper" || playerSelection === "Paper" && computerSelection === "Scissor") {
+        console.log("You lose! " + playerSelection + " is beaten by " +computerSelection);
+    }  
+}
+
+
+
 let computerChoice;
 getComputerChoice();
+const computerSelection = computerChoice;
+const playerSelection = "Scissor";
 console.log("The computer has picked " + computerChoice);
+selection(playerSelection, computerSelection);    
