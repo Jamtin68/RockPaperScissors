@@ -1,6 +1,6 @@
 function getComputerChoice() {
     const randNum = Math.floor(Math.random() * 3) + 1;
-    console.log(randNum)
+    //console.log(randNum)
     
     if (randNum === 1) {
         computerChoice = "Rock";
@@ -25,11 +25,25 @@ function selection(playerSelection, computerSelection) {
     }  
 }
 
+function playerInput(a) {
+    //console.log(a);
+    playerSelection = a.charAt(0).toUpperCase() + a.slice(1).toLowerCase();
+    //console.log(playerSelection);
+    return playerSelection;
+
+}
+
+
+//Input your choice here:
+
+let a = "sciSsor";
 
 
 let computerChoice;
 getComputerChoice();
 const computerSelection = computerChoice;
-const playerSelection = "Scissor";
+let playerSelection; 
+playerInput(a);
+//console.log(playerSelection);
 console.log("The computer has picked " + computerChoice);
-selection(playerSelection, computerSelection);    
+selection(playerSelection, computerSelection);  
