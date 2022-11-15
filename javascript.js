@@ -18,10 +18,14 @@ function getComputerChoice() {
 function selection(playerSelection, computerSelection) {
     if (playerSelection === computerSelection) {
         console.log("It is a draw! You both picked " + playerSelection);
-    } else if (playerSelection === "Scissor" && computerSelection === "Paper" || playerSelection === "Paper" && computerSelection === "Rock" || playerSelection === "Rock" && computerSelection === "Scissor") {
+    } else if (playerSelection === "Scissor" && computerSelection === "Paper" || 
+               playerSelection === "Paper" && computerSelection === "Rock" || 
+               playerSelection === "Rock" && computerSelection === "Scissor") {
         console.log("You win! " + playerSelection + " beats " +computerSelection);
         p++;
-    } else if (playerSelection === "Scissor" && computerSelection === "Rock" || playerSelection === "Rock" && computerSelection === "Paper" || playerSelection === "Paper" && computerSelection === "Scissor") {
+    } else if (playerSelection === "Scissor" && computerSelection === "Rock" || 
+               playerSelection === "Rock" && computerSelection === "Paper" || 
+               playerSelection === "Paper" && computerSelection === "Scissor") {
         console.log("You lose! " + playerSelection + " is beaten by " +computerSelection);
         c++;
     }  
